@@ -1,0 +1,82 @@
+//====================================================================================================
+
+.wrapper {
+	min-height: 100vh; // !во всю ширину вьюпорта (html, body должны быть height: 100%)
+	display: flex;
+	flex-direction: column; // !прижать футер
+	overflow: hidden;
+	// Прижимаем footer
+	> main {
+		flex: 1 1 auto;
+	}
+	// Фикс для слайдеров
+	> * {
+		min-width: 0;
+	}
+}
+
+.page {
+	padding: 90px 0px 0px 0px;
+}
+.full-screen {
+	background-color: #525b72;
+	display: flex;
+	min-height: 100vh;
+	padding: 30px 0px; 
+
+	&__container {
+		width: 100%;  //!!! Для Internet Explorer
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: #fff;
+		padding: 0px 20px;
+	}
+
+	&__title {
+		font-size: 50px;
+		margin: 0px 0px 20px 0px;
+		color: #fff;
+	}
+
+	&__text {
+		font-size: 28px;
+	}
+
+	&__link {
+		font-size: 34px;
+		display: inline-block;
+		line-height: 50px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		background-color: #fc9717;
+		align-self: center;  //!!! чтобы не растянуло но весь блок
+		padding: 15px 20px;
+		margin: 40px 0px 0px 0px;
+		border-radius: 15px;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+		&:hover {
+			background-color: #100f0e;
+			color: #fc9717;
+		}
+	}
+	&_two {
+		background: url('@img/derevo.jpg') center/cover fixed;
+	}
+	&_three {
+		background-color: #898177;
+	}
+}
+
+
+.content {
+	margin: -90px 0px 0px 0px;
+	background-color: #fff;
+	padding: 30px 20px;
+	font-size: 24px;
+	line-height: 130%;
+	color: #79c1aa;
+	background-color: #292a2d;
+}
